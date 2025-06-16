@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Calendar, DollarSign, Clock, Star } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import specialsData from '@/content/specials.json'
+import specialsData from '@/content/daily-specials.json'
 
 const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 

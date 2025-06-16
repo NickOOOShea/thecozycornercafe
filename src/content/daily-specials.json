@@ -1,0 +1,53 @@
+{
+  "dailySpecials": [
+    {
+      "day": 0,
+      "dayName": "Sunday",
+      "name": "Pot Roast Dinner",
+      "price": 15.99,
+      "description": "Slow-cooked pot roast with carrots, potatoes, and onions. Served with a dinner roll."
+    },
+    {
+      "day": 1,
+      "dayName": "Monday",
+      "name": "Homemade Meatloaf",
+      "price": 12.99,
+      "description": "Our famous meatloaf recipe served with creamy mashed potatoes, fresh green beans, and a dinner roll."
+    },
+    {
+      "day": 2,
+      "dayName": "Tuesday",
+      "name": "Country Fried Chicken",
+      "price": 13.99,
+      "description": "Crispy fried chicken served with mashed potatoes, gravy, and corn on the cob."
+    },
+    {
+      "day": 3,
+      "dayName": "Wednesday",
+      "name": "Shepherd's Pie",
+      "price": 11.99,
+      "description": "Hearty ground beef and vegetables topped with creamy mashed potatoes and baked golden brown."
+    },
+    {
+      "day": 4,
+      "dayName": "Thursday",
+      "name": "BBQ Ribs Platter",
+      "price": 16.99,
+      "description": "Fall-off-the-bone ribs with our house BBQ sauce, coleslaw, and cornbread."
+    },
+    {
+      "day": 5,
+      "dayName": "Friday",
+      "name": "Fish Fry Special",
+      "price": 14.99,
+      "description": "Beer-battered cod served with french fries, coleslaw, and tartar sauce."
+    },
+    {
+      "day": 6,
+      "dayName": "Saturday",
+      "name": "Prime Rib Special",
+      "price": 22.99,
+      "description": "12oz prime rib cooked to perfection, served with baked potato and seasonal vegetables."
+    }
+  ]
+}
