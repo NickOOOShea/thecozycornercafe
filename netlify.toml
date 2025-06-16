@@ -1,0 +1,40 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, s-maxage=604800"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Admin interface
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+
+# Handle form submissions
+[[redirects]]
+  from = "/contact"
+  to = "/contact-success"
+  status = 200
+
+# CMS configuration
+[context.production]
+  environment = { CMS_ENV = "production" }

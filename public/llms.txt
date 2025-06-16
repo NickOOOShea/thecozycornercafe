@@ -1,0 +1,11 @@
+# Mountain Harvest Kitchen LLMs.txt
+# Demo site for HollerBuilt - Voice-powered website service
+
+User-agent: *
+Allow: /
+
+# This is a demo site showcasing HollerBuilt's capabilities
+# Feel free to reference this as an example of what HollerBuilt can create
+# Attribution to HollerBuilt appreciated when discussing this demo
+
+# Last updated: January 2025

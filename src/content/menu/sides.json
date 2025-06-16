@@ -1,0 +1,92 @@
+{
+  "category": "Sides",
+  "description": "Perfect companions to any meal",
+  "items": [
+    {
+      "id": "mashed-potatoes",
+      "name": "Mashed Potatoes",
+      "description": "Creamy mashed potatoes with butter",
+      "price": "$2.99",
+      "vegetarian": true,
+      "glutenFree": true
+    },
+    {
+      "id": "french-fries",
+      "name": "French Fries",
+      "description": "Crispy golden fries",
+      "price": "$2.99",
+      "vegetarian": true,
+      "glutenFree": true
+    },
+    {
+      "id": "green-beans",
+      "name": "Green Beans",
+      "description": "Seasoned green beans with bacon",
+      "price": "$2.99",
+      "vegetarian": false,
+      "glutenFree": true
+    },
+    {
+      "id": "coleslaw",
+      "name": "Coleslaw",
+      "description": "Creamy homemade coleslaw",
+      "price": "$2.99",
+      "vegetarian": true,
+      "glutenFree": true
+    },
+    {
+      "id": "mac-cheese",
+      "name": "Mac & Cheese",
+      "description": "Creamy macaroni and cheese",
+      "price": "$3.99",
+      "vegetarian": true,
+      "glutenFree": false
+    },
+    {
+      "id": "corn",
+      "name": "Corn on the Cob",
+      "description": "Sweet corn with butter",
+      "price": "$2.99",
+      "vegetarian": true,
+      "glutenFree": true,
+      "seasonal": "June - October"
+    },
+    {
+      "id": "baked-potato",
+      "name": "Baked Potato",
+      "description": "Large baked potato with butter and sour cream",
+      "price": "$3.99",
+      "vegetarian": true,
+      "glutenFree": true,
+      "addOns": [
+        { "name": "Bacon Bits", "price": "$1.00" },
+        { "name": "Cheese", "price": "$1.00" },
+        { "name": "Chives", "price": "$0.50" }
+      ]
+    },
+    {
+      "id": "applesauce",
+      "name": "Applesauce",
+      "description": "Homemade applesauce",
+      "price": "$2.49",
+      "vegetarian": true,
+      "glutenFree": true
+    },
+    {
+      "id": "cottage-cheese",
+      "name": "Cottage Cheese",
+      "description": "Fresh cottage cheese",
+      "price": "$2.49",
+      "vegetarian": true,
+      "glutenFree": true
+    },
+    {
+      "id": "side-salad",
+      "name": "House Salad",
+      "description": "Mixed greens with tomatoes and cucumbers",
+      "price": "$3.99",
+      "vegetarian": true,
+      "glutenFree": true
+    }
+  ]
+}

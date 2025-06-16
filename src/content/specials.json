@@ -1,0 +1,47 @@
+[
+  {
+    "id": "breakfast-special",
+    "name": "Country Breakfast Platter",
+    "description": "Two eggs any style, crispy bacon, golden hash browns, and buttered toast. The perfect way to start your day!",
+    "price": "$8.99",
+    "available": "Daily 6 AM - 11 AM",
+    "category": "breakfast",
+    "featured": true
+  },
+  {
+    "id": "lunch-special",
+    "name": "Homemade Meatloaf",
+    "description": "Our famous meatloaf recipe served with creamy mashed potatoes, fresh green beans, and a dinner roll",
+    "price": "$12.99",
+    "available": "Monday - Friday 11 AM - 8 PM",
+    "category": "lunch",
+    "featured": true
+  },
+  {
+    "id": "dinner-special",
+    "name": "Country Fried Steak",
+    "description": "Hand-breaded beef cutlet fried golden brown, topped with pepper gravy, served with mashed potatoes and corn",
+    "price": "$14.99",
+    "available": "Daily after 4 PM",
+    "category": "dinner",
+    "featured": true
+  },
+  {
+    "id": "dessert-special",
+    "name": "Fresh Apple Pie",
+    "description": "Homemade apple pie baked fresh daily, served warm with a scoop of vanilla ice cream",
+    "price": "$5.99",
+    "available": "Daily while supplies last",
+    "category": "dessert",
+    "featured": true
+  },
+  {
+    "id": "soup-special",
+    "name": "Soup of the Day",
+    "description": "Ask your server about today's homemade soup. Served with crackers or cornbread",
+    "price": "$4.99 cup / $6.99 bowl",
+    "available": "Daily 11 AM until sold out",
+    "category": "lunch",
+    "featured": false
+  }
+]

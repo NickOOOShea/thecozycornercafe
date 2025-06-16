@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Now Offering Catering Services!",
+    "content": "Let us bring the comfort of The Cozy Corner Cafe to your next event. From office lunches to family gatherings, we've got you covered. Call us for details!",
+    "startDate": "2024-01-01",
+    "endDate": "2025-12-31",
+    "priority": "high"
+  },
+  {
+    "id": 2,
+    "title": "Senior Discount - 10% Off",
+    "content": "Seniors 65+ receive 10% off their entire meal every day. Thank you for being part of our community!",
+    "startDate": "2024-01-01",
+    "endDate": "2025-12-31",
+    "priority": "normal"
+  },
+  {
+    "id": 3,
+    "title": "Free WiFi Available",
+    "content": "Stay connected while you enjoy your meal. Ask your server for the WiFi password.",
+    "startDate": "2024-01-01",
+    "endDate": "2025-12-31",
+    "priority": "low"
+  }
+]

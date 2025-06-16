@@ -1,0 +1,25 @@
+{
+  "regular": {
+    "monday": { "open": "6:00 AM", "close": "8:00 PM" },
+    "tuesday": { "open": "6:00 AM", "close": "8:00 PM" },
+    "wednesday": { "open": "6:00 AM", "close": "8:00 PM" },
+    "thursday": { "open": "6:00 AM", "close": "8:00 PM" },
+    "friday": { "open": "6:00 AM", "close": "8:00 PM" },
+    "saturday": { "open": "7:00 AM", "close": "9:00 PM" },
+    "sunday": { "open": "8:00 AM", "close": "3:00 PM" }
+  },
+  "holidays": {
+    "christmas": { "closed": true },
+    "thanksgiving": { "closed": true },
+    "easter": { "open": "9:00 AM", "close": "2:00 PM" },
+    "july4": { "open": "8:00 AM", "close": "6:00 PM" },
+    "memorial": { "open": "8:00 AM", "close": "6:00 PM" },
+    "labor": { "open": "8:00 AM", "close": "6:00 PM" },
+    "newyears": { "open": "10:00 AM", "close": "4:00 PM" }
+  },
+  "specialHours": {
+    "christmasEve": { "open": "6:00 AM", "close": "2:00 PM" },
+    "thanksgivingEve": { "open": "6:00 AM", "close": "6:00 PM" },
+    "newyearsEve": { "open": "6:00 AM", "close": "6:00 PM" }
+  }
+}

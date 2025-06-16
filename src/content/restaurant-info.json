@@ -1,0 +1,51 @@
+{
+  "name": "The Cozy Corner Cafe",
+  "tagline": "Comfort Food & Warm Hearts Since 1985",
+  "phone": "(304) 555-0123",
+  "email": "hello@cozycornercafe.com",
+  "address": {
+    "street": "123 Main Street",
+    "city": "Clarksburg",
+    "state": "WV",
+    "zip": "26301",
+    "county": "Harrison County"
+  },
+  "coordinates": {
+    "lat": 39.2806,
+    "lng": -80.3445
+  },
+  "established": "1985",
+  "description": "Where every meal feels like home. The Cozy Corner Cafe has been serving Clarksburg's favorite comfort food for nearly 40 years. From our famous country breakfast to our hearty dinner platters, everything is made with love and served with a smile.",
+  "specialties": [
+    "Country Breakfast Platter",
+    "Homemade Meatloaf",
+    "Fresh Baked Pies",
+    "Daily Blue Plate Specials",
+    "Hand-breaded Fried Chicken"
+  ],
+  "payment": {
+    "cash": true,
+    "check": true,
+    "card": true,
+    "contactless": true
+  },
+  "seating": {
+    "indoor": 50,
+    "outdoor": 0,
+    "privateRoom": 20
+  },
+  "features": [
+    "Family-owned since 1985",
+    "Everything made from scratch daily",
+    "Local ingredients when available",
+    "Senior discounts (10% off)",
+    "Kids menu available",
+    "Free WiFi",
+    "Catering services",
+    "Private dining room for events"
+  ],
+  "social": {
+    "facebook": "https://facebook.com/cozycornercafe",
+    "instagram": "https://instagram.com/cozycornercafe"
+  }
+}

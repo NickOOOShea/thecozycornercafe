@@ -1,0 +1,36 @@
+[
+  {
+    "id": "live-music-fridays",
+    "title": "Live Music Fridays",
+    "description": "Join us every Friday evening for live acoustic music featuring local artists. Great food, great music, great times!",
+    "date": "Every Friday",
+    "time": "6:00 PM - 8:00 PM",
+    "recurring": true,
+    "image": "/images/live-music.jpg"
+  },
+  {
+    "id": "senior-tuesday",
+    "title": "Senior Tuesday Special",
+    "description": "Every Tuesday, seniors 65+ receive 15% off their entire meal (regular 10% discount increased to 15% on Tuesdays).",
+    "date": "Every Tuesday",
+    "time": "All Day",
+    "recurring": true
+  },
+  {
+    "id": "kids-eat-free",
+    "title": "Kids Eat Free Wednesdays",
+    "description": "Children 12 and under eat free with the purchase of an adult entree every Wednesday. One free kids meal per adult entree.",
+    "date": "Every Wednesday",
+    "time": "4:00 PM - 8:00 PM",
+    "recurring": true
+  },
+  {
+    "id": "sunday-brunch",
+    "title": "Sunday Brunch Special",
+    "description": "All-you-can-eat brunch buffet featuring scrambled eggs, bacon, sausage, pancakes, fresh fruit, and more!",
+    "date": "Every Sunday",
+    "time": "9:00 AM - 2:00 PM",
+    "price": "$12.99 Adults / $6.99 Kids",
+    "recurring": true
+  }
+]

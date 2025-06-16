@@ -1,0 +1,126 @@
+{
+  "category": "Lunch & Dinner",
+  "description": "Hearty comfort food that satisfies. All entrees come with your choice of two sides.",
+  "items": [
+    {
+      "id": "meatloaf",
+      "name": "Homemade Meatloaf",
+      "description": "Our famous recipe made with ground beef and pork, topped with tangy tomato glaze",
+      "price": "$12.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false,
+      "featured": true
+    },
+    {
+      "id": "fried-chicken",
+      "name": "Country Fried Chicken",
+      "description": "Half chicken, hand-breaded and fried to golden perfection",
+      "price": "$13.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false
+    },
+    {
+      "id": "chicken-fried-steak",
+      "name": "Chicken Fried Steak",
+      "description": "Tenderized beef cutlet, breaded and fried, topped with creamy pepper gravy",
+      "price": "$14.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false,
+      "featured": true
+    },
+    {
+      "id": "pot-roast",
+      "name": "Sunday Pot Roast",
+      "description": "Slow-cooked beef roast with carrots, potatoes, and onions in rich brown gravy",
+      "price": "$15.99",
+      "vegetarian": false,
+      "glutenFree": true,
+      "spicy": false,
+      "availability": "Sunday only"
+    },
+    {
+      "id": "grilled-salmon",
+      "name": "Grilled Atlantic Salmon",
+      "description": "Fresh salmon fillet grilled with lemon butter and herbs",
+      "price": "$16.99",
+      "vegetarian": false,
+      "glutenFree": true,
+      "spicy": false
+    },
+    {
+      "id": "chicken-dumpling",
+      "name": "Chicken & Dumplings",
+      "description": "Tender chicken and fluffy dumplings in savory broth with vegetables",
+      "price": "$11.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false
+    },
+    {
+      "id": "liver-onions",
+      "name": "Liver & Onions",
+      "description": "Pan-fried beef liver topped with caramelized onions and bacon",
+      "price": "$10.99",
+      "vegetarian": false,
+      "glutenFree": true,
+      "spicy": false
+    },
+    {
+      "id": "blt",
+      "name": "BLT Sandwich",
+      "description": "Crispy bacon, fresh lettuce, ripe tomatoes, and mayo on toasted white bread",
+      "price": "$8.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false,
+      "sides": ["Fries", "Chips", "Coleslaw", "Soup"]
+    },
+    {
+      "id": "club-sandwich",
+      "name": "Turkey Club",
+      "description": "Triple-decker with turkey, bacon, lettuce, tomato, and mayo",
+      "price": "$10.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false,
+      "sides": ["Fries", "Chips", "Coleslaw", "Soup"]
+    },
+    {
+      "id": "hamburger",
+      "name": "Classic Hamburger",
+      "description": "Half-pound beef patty with lettuce, tomato, onion, and pickles",
+      "price": "$9.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false,
+      "addOns": [
+        { "name": "Cheese", "price": "$1.00" },
+        { "name": "Bacon", "price": "$2.00" },
+        { "name": "Mushrooms", "price": "$1.50" }
+      ],
+      "sides": ["Fries", "Chips", "Coleslaw", "Soup"]
+    },
+    {
+      "id": "chef-salad",
+      "name": "Chef Salad",
+      "description": "Mixed greens with ham, turkey, cheese, hard-boiled egg, and vegetables",
+      "price": "$9.99",
+      "vegetarian": false,
+      "glutenFree": true,
+      "spicy": false,
+      "dressings": ["Ranch", "Italian", "Thousand Island", "Blue Cheese", "Honey Mustard"]
+    },
+    {
+      "id": "soup-salad",
+      "name": "Soup & Salad Combo",
+      "description": "Cup of today's soup with a house salad",
+      "price": "$7.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false
+    }
+  ]
+}

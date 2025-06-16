@@ -1,0 +1,83 @@
+{
+  "category": "Desserts",
+  "description": "Sweet endings to perfect meals. All desserts are made fresh in-house daily.",
+  "items": [
+    {
+      "id": "apple-pie",
+      "name": "Fresh Apple Pie",
+      "description": "Homemade apple pie with flaky crust, served warm",
+      "price": "$4.99",
+      "vegetarian": true,
+      "glutenFree": false,
+      "addOns": [
+        { "name": "Vanilla Ice Cream", "price": "$1.99" },
+        { "name": "Whipped Cream", "price": "$0.99" },
+        { "name": "Caramel Sauce", "price": "$0.99" }
+      ],
+      "featured": true
+    },
+    {
+      "id": "chocolate-cake",
+      "name": "Chocolate Layer Cake",
+      "description": "Rich, moist chocolate cake with chocolate buttercream frosting",
+      "price": "$5.99",
+      "vegetarian": true,
+      "glutenFree": false
+    },
+    {
+      "id": "coconut-cream-pie",
+      "name": "Coconut Cream Pie",
+      "description": "Silky coconut custard in a graham cracker crust, topped with whipped cream",
+      "price": "$4.99",
+      "vegetarian": true,
+      "glutenFree": false
+    },
+    {
+      "id": "banana-pudding",
+      "name": "Banana Pudding",
+      "description": "Layers of vanilla wafers, fresh bananas, and homemade pudding",
+      "price": "$3.99",
+      "vegetarian": true,
+      "glutenFree": false
+    },
+    {
+      "id": "peach-cobbler",
+      "name": "Peach Cobbler",
+      "description": "Sweet peaches baked with a buttery biscuit topping",
+      "price": "$4.99",
+      "vegetarian": true,
+      "glutenFree": false,
+      "seasonal": "June - September",
+      "addOns": [
+        { "name": "Vanilla Ice Cream", "price": "$1.99" }
+      ]
+    },
+    {
+      "id": "cheesecake",
+      "name": "New York Cheesecake",
+      "description": "Creamy cheesecake with graham cracker crust",
+      "price": "$5.99",
+      "vegetarian": true,
+      "glutenFree": false,
+      "toppings": ["Strawberry", "Cherry", "Blueberry", "Caramel"]
+    },
+    {
+      "id": "bread-pudding",
+      "name": "Bread Pudding",
+      "description": "Warm bread pudding with raisins, served with bourbon sauce",
+      "price": "$4.99",
+      "vegetarian": true,
+      "glutenFree": false
+    },
+    {
+      "id": "ice-cream",
+      "name": "Ice Cream Sundae",
+      "description": "Three scoops of ice cream with your choice of toppings",
+      "price": "$4.99",
+      "vegetarian": true,
+      "glutenFree": true,
+      "flavors": ["Vanilla", "Chocolate", "Strawberry", "Butter Pecan"],
+      "toppings": ["Hot Fudge", "Caramel", "Strawberry", "Whipped Cream", "Nuts", "Cherry"]
+    }
+  ]
+}

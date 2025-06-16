@@ -1,0 +1,99 @@
+{
+  "category": "Breakfast",
+  "description": "Start your day right with our hearty breakfast options. Served all day!",
+  "items": [
+    {
+      "id": "classic-breakfast",
+      "name": "Classic Breakfast",
+      "description": "Two eggs cooked to order, choice of bacon or sausage, hash browns, and toast",
+      "price": "$7.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false
+    },
+    {
+      "id": "country-breakfast",
+      "name": "Country Breakfast Platter",
+      "description": "Two eggs any style, crispy bacon, country sausage, golden hash browns, biscuit with gravy, and toast",
+      "price": "$10.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false,
+      "featured": true
+    },
+    {
+      "id": "pancake-stack",
+      "name": "Buttermilk Pancakes",
+      "description": "Three fluffy pancakes served with butter and warm maple syrup",
+      "price": "$6.99",
+      "vegetarian": true,
+      "glutenFree": false,
+      "spicy": false,
+      "addOns": [
+        { "name": "Blueberries", "price": "$1.50" },
+        { "name": "Chocolate Chips", "price": "$1.50" },
+        { "name": "Whipped Cream", "price": "$0.99" }
+      ]
+    },
+    {
+      "id": "french-toast",
+      "name": "Cinnamon French Toast",
+      "description": "Three slices of thick-cut bread dipped in our special cinnamon egg batter, griddled golden brown",
+      "price": "$7.49",
+      "vegetarian": true,
+      "glutenFree": false,
+      "spicy": false
+    },
+    {
+      "id": "western-omelet",
+      "name": "Western Omelet",
+      "description": "Three-egg omelet with ham, peppers, onions, and cheddar cheese. Served with hash browns and toast",
+      "price": "$9.99",
+      "vegetarian": false,
+      "glutenFree": true,
+      "spicy": false
+    },
+    {
+      "id": "veggie-omelet",
+      "name": "Garden Veggie Omelet",
+      "description": "Three-egg omelet with mushrooms, tomatoes, peppers, onions, and Swiss cheese. Served with hash browns and toast",
+      "price": "$8.99",
+      "vegetarian": true,
+      "glutenFree": true,
+      "spicy": false
+    },
+    {
+      "id": "biscuits-gravy",
+      "name": "Biscuits & Gravy",
+      "description": "Two homemade buttermilk biscuits smothered in our signature sausage gravy",
+      "price": "$6.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false,
+      "featured": true
+    },
+    {
+      "id": "breakfast-sandwich",
+      "name": "Breakfast Sandwich",
+      "description": "Fried egg, American cheese, and choice of bacon or sausage on a toasted English muffin",
+      "price": "$5.99",
+      "vegetarian": false,
+      "glutenFree": false,
+      "spicy": false
+    },
+    {
+      "id": "oatmeal",
+      "name": "Old-Fashioned Oatmeal",
+      "description": "Hearty oatmeal served with brown sugar, raisins, and milk",
+      "price": "$4.99",
+      "vegetarian": true,
+      "glutenFree": true,
+      "spicy": false,
+      "addOns": [
+        { "name": "Fresh Berries", "price": "$2.00" },
+        { "name": "Sliced Banana", "price": "$1.00" },
+        { "name": "Pecans", "price": "$1.50" }
+      ]
+    }
+  ]
+}
