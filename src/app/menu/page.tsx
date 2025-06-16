@@ -24,7 +24,7 @@ type MenuItemType = {
   dietary?: string[]
   image?: string
   customization?: string
-  addOns?: string[]
+  addOns?: any[]
   sides?: string[]
   note?: string
 }
@@ -38,12 +38,28 @@ export default function MenuPage() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   useEffect(() => {
+    // Helper function to process menu items
+    const processItem = (item: any, defaultCategory: string) => ({
+      ...item,
+      price: typeof item.price === 'string' ? parseFloat(item.price.replace('$', '')) : item.price,
+      category: item.category || defaultCategory,
+      available: true,
+      dietary: [
+        ...(item.vegetarian ? ['vegetarian'] : []),
+        ...(item.glutenFree ? ['gluten-free'] : []),
+        ...(item.spicy ? ['spicy'] : [])
+      ]
+    })
+
     // Combine all menu items
     const allItems: MenuItemType[] = [
-      ...breakfastData.items,
-      ...lunchDinnerData.items,
-      ...dessertsData.items.map(item => ({ ...item, category: 'dessert' })),
-      ...sidesData.items.map(item => ({ ...item, category: 'sides', description: '' }))
+      ...breakfastData.items.map(item => processItem(item, 'breakfast')),
+      ...lunchDinnerData.items.map(item => processItem(item, 'lunch')),
+      ...dessertsData.items.map(item => processItem(item, 'dessert')),
+      ...sidesData.items.map(item => ({
+        ...processItem(item, 'sides'),
+        description: item.description || ''
+      }))
     ]
     
     setMenuItems(allItems)
