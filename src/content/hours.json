@@ -2,7 +2,7 @@
   "regular": {
     "monday": {
       "open": "6:00 AM",
-      "close": "8:00 PM",
+      "close": "6:00 PM",
       "closed": false
     },
     "tuesday": {
