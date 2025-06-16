@@ -27,10 +27,23 @@ export default function MenuPreview() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    // Helper function to process menu items
+    const processItem = (item: any, defaultCategory: string) => ({
+      ...item,
+      price: typeof item.price === 'string' ? parseFloat(item.price.replace('$', '')) : item.price,
+      category: item.category || defaultCategory,
+      available: true,
+      dietary: [
+        ...(item.vegetarian ? ['vegetarian'] : []),
+        ...(item.glutenFree ? ['gluten-free'] : []),
+        ...(item.spicy ? ['spicy'] : [])
+      ]
+    })
+
     // Combine featured items from different categories
-    const allItems = [
-      ...breakfastData.items,
-      ...lunchDinnerData.items
+    const allItems: MenuItemType[] = [
+      ...breakfastData.items.map(item => processItem(item, 'breakfast')),
+      ...lunchDinnerData.items.map(item => processItem(item, 'lunch'))
     ]
     
     setMenuItems(allItems)
