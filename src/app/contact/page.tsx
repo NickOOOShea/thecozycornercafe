@@ -23,12 +23,12 @@ export default function ContactPage() {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-display font-bold text-mountain-green-900 mb-4">
-              Find Mountain View Farm
+              Find The Cozy Corner Cafe
             </h1>
             
             <p className="text-lg text-mountain-green-700 max-w-2xl mx-auto">
-              Located in the heart of Preston County, just 15 minutes from Kingwood. 
-              Look for the red barn and the Mountain View Farm sign.
+              Located on Main Street in downtown Clarksburg, we're easy to find 
+              with plenty of parking available.
             </p>
           </motion.div>
         </div>
@@ -58,15 +58,15 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-mountain-green-900 mb-2">
-                        Farm Location
+                        Restaurant Location
                       </h3>
                       <address className="not-italic text-mountain-green-600">
-                        123 Mountain Road<br />
-                        Kingwood, WV 26537<br />
-                        Preston County
+                        123 Main Street<br />
+                        Clarksburg, WV 26301<br />
+                        Harrison County
                       </address>
                       <a 
-                        href="https://maps.google.com/maps?daddr=123+Mountain+Road,+Kingwood,+WV+26537" 
+                        href="https://maps.google.com/maps?daddr=123+Main+Street,+Clarksburg,+WV+26301" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center space-x-2 mt-3 text-mountain-green-600 hover:text-mountain-green-700 font-medium"
@@ -89,13 +89,13 @@ export default function ContactPage() {
                         Call Us
                       </h3>
                       <a 
-                        href="tel:+13045551234" 
+                        href="tel:+13045550123" 
                         className="text-xl text-mountain-green-600 hover:text-mountain-green-700 font-medium"
                       >
-                        (304) 555-1234
+                        (304) 555-0123
                       </a>
                       <p className="text-sm text-mountain-green-600 mt-1">
-                        Best time to call: 8 AM - 6 PM
+                        Call ahead for takeout orders
                       </p>
                     </div>
                   </div>
@@ -112,10 +112,10 @@ export default function ContactPage() {
                         Email Us
                       </h3>
                       <a 
-                        href="mailto:info@mountainviewfarmwv.com" 
+                        href="mailto:hello@cozycornercafe.com" 
                         className="text-mountain-green-600 hover:text-mountain-green-700"
                       >
-                        info@mountainviewfarmwv.com
+                        hello@cozycornercafe.com
                       </a>
                       <p className="text-sm text-mountain-green-600 mt-1">
                         We'll respond within 24 hours
@@ -132,20 +132,20 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-grow">
                       <h3 className="font-bold text-lg text-mountain-green-900 mb-2">
-                        Farm Stand Hours
+                        Restaurant Hours
                       </h3>
                       <div className="space-y-1 text-mountain-green-600">
                         <div className="flex justify-between">
                           <span>Monday - Friday:</span>
-                          <span className="font-medium">8 AM - 6 PM</span>
+                          <span className="font-medium">6 AM - 8 PM</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Saturday:</span>
-                          <span className="font-medium">7 AM - 7 PM</span>
+                          <span className="font-medium">7 AM - 9 PM</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Sunday:</span>
-                          <span className="font-medium">9 AM - 5 PM</span>
+                          <span className="font-medium">8 AM - 3 PM</span>
                         </div>
                       </div>
                     </div>
@@ -180,7 +180,7 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               <p className="text-lg text-mountain-green-700">
-                Have a question about our products or want to schedule a farm visit? 
+                Have a question about our menu or want to book our private dining room? 
                 We'd love to hear from you!
               </p>
             </div>

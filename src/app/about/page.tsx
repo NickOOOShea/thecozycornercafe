@@ -28,14 +28,13 @@ export default function AboutPage() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-mountain-green-900 mb-6">
-              Three Generations of
-              <span className="text-gradient block">Mountain Hospitality</span>
+              Comfort Food &
+              <span className="text-gradient block">Warm Hearts Since 1985</span>
             </h1>
             
             <p className="text-xl text-mountain-green-700 leading-relaxed">
-              Since 1952, our family has been serving home-cooked meals to our 
-              neighbors in Preston County. What started as a 10-table diner has 
-              grown into a beloved community gathering place.
+              For nearly 40 years, The Cozy Corner Cafe has been serving 
+              Clarksburg's favorite comfort food. Where every meal feels like home.
             </p>
           </motion.div>
         </div>
@@ -52,40 +51,39 @@ export default function AboutPage() {
               className="order-2 lg:order-1"
             >
               <h2 className="text-3xl font-display font-bold text-mountain-green-900 mb-6">
-                More Than Just a Diner
+                More Than Just a Restaurant
               </h2>
               
               <div className="space-y-4 text-mountain-green-700">
                 <p className="leading-relaxed">
-                  My grandparents, Earl and Betty Johnson, opened Mountain View Diner 
-                  with a simple idea: serve good food at fair prices, and treat everyone 
-                  like family. That philosophy hasn't changed in over 70 years.
+                  When Sarah and Mike Thompson opened The Cozy Corner Cafe in 1985, 
+                  they had a simple dream: create a place where neighbors could gather 
+                  for good food and warm conversation.
                 </p>
                 
                 <p className="leading-relaxed">
-                  Today, my wife Mary and I, along with our children and grandchildren, 
-                  continue that tradition. We still use Grandma Betty's recipes for our 
-                  famous biscuits and pies. We still brew coffee the same way. And we 
-                  still believe that a good meal shared with good people is one of life's 
-                  simple pleasures.
+                  Today, that dream lives on. We still make everything from scratch 
+                  daily - from our famous buttermilk biscuits to our homemade pies. 
+                  We still brew fresh coffee every hour. And we still believe that 
+                  a good meal shared with good people is what life's all about.
                 </p>
                 
                 <p className="leading-relaxed">
-                  When you eat at Mountain View Diner, you're not just a customer. 
-                  You're part of our extended family, part of a tradition that's been 
-                  bringing folks together for generations.
+                  When you dine at The Cozy Corner Cafe, you're not just a customer. 
+                  You're part of our family, part of a tradition that's been 
+                  bringing Clarksburg together for generations.
                 </p>
               </div>
 
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-barn-red-50 rounded-lg p-4 text-center">
                   <Calendar className="w-8 h-8 text-barn-red-600 mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-barn-red-800">72</p>
+                  <p className="text-2xl font-bold text-barn-red-800">39</p>
                   <p className="text-sm text-barn-red-600">Years Serving</p>
                 </div>
                 <div className="bg-sky-blue-50 rounded-lg p-4 text-center">
                   <Utensils className="w-8 h-8 text-sky-blue-600 mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-sky-blue-800">100K+</p>
+                  <p className="text-2xl font-bold text-sky-blue-800">75K+</p>
                   <p className="text-sm text-sky-blue-600">Meals Served Yearly</p>
                 </div>
               </div>
@@ -98,12 +96,12 @@ export default function AboutPage() {
               className="order-1 lg:order-2"
             >
               <div className="relative rounded-2xl overflow-hidden mountain-shadow">
-                {/* Placeholder for diner photo */}
+                {/* Placeholder for cafe photo */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-barn-red-100 to-autumn-orange-100">
                   <div className="w-full h-full flex items-center justify-center">
                     <div className="text-center p-8">
                       <Coffee className="w-20 h-20 text-barn-red-400 mx-auto mb-4" />
-                      <p className="text-barn-red-600">Diner Interior Photo</p>
+                      <p className="text-barn-red-600">Cafe Interior Photo</p>
                     </div>
                   </div>
                 </div>
@@ -141,19 +139,19 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
-                year: '1999-2024',
-                title: 'Best Breakfast',
-                description: 'Preston County Times - 25 consecutive years'
+                year: '2010-2024',
+                title: 'Best Comfort Food',
+                description: 'Clarksburg Exponent - 14 consecutive years'
               },
               {
                 year: '2023',
-                title: 'Community Cornerstone',
+                title: 'Community Favorite',
                 description: 'West Virginia Restaurant Association'
               },
               {
                 year: '2022',
-                title: 'Pie of the Year',
-                description: 'WV State Fair - Apple Crumb Pie'
+                title: 'Best Apple Pie',
+                description: 'Harrison County Fair'
               }
             ].map((award, index) => (
               <motion.div
@@ -190,13 +188,13 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90">
               Whether it's breakfast, lunch, or dinner, we've got a seat waiting for you. 
-              Stop by today and taste what mountain hospitality is all about.
+              Stop by today and experience what makes The Cozy Corner Cafe special.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/menu" className="btn-secondary bg-white text-barn-red-600 hover:bg-gray-100">
                 View Our Menu
               </a>
-              <a href="tel:+13045551234" className="btn-secondary bg-transparent border-white text-white hover:bg-white/10">
+              <a href="tel:+13045550123" className="btn-secondary bg-transparent border-white text-white hover:bg-white/10">
                 Call for Takeout
               </a>
             </div>

@@ -2,95 +2,85 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Coffee, Calendar, Heart, ArrowRight } from 'lucide-react'
+import { Clock, Users, Award, ArrowRight } from 'lucide-react'
 
 export default function AboutPreview() {
   return (
-    <section className="section-container">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        {/* Image Side */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative"
-        >
-          <div className="relative rounded-2xl overflow-hidden mountain-shadow">
-            {/* Placeholder for diner/family image */}
-            <div className="aspect-[4/3] bg-gradient-to-br from-barn-red-100 to-autumn-orange-100">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Coffee className="w-16 h-16 text-barn-red-400 mx-auto mb-4" />
-                  <p className="text-barn-red-600">Diner Interior Photo</p>
+    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-mountain-green-50">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-mountain-green-900 mb-6">
+              Welcome to The Cozy Corner Cafe
+            </h2>
+            
+            <p className="text-lg text-mountain-green-700 mb-6 leading-relaxed">
+              Since 1985, we've been serving comfort food that warms the heart and 
+              satisfies the soul. Our family-owned restaurant has become a beloved 
+              gathering place for Clarksburg residents and visitors alike.
+            </p>
+            
+            <p className="text-lg text-mountain-green-700 mb-8 leading-relaxed">
+              From our famous country breakfast to our hearty dinner platters, 
+              everything is made from scratch daily using time-tested recipes. 
+              When you dine with us, you're not just a customer - you're family.
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <Clock className="w-8 h-8 text-barn-red-600 mx-auto mb-2" />
+                <p className="text-2xl font-bold text-mountain-green-800">39</p>
+                <p className="text-sm text-mountain-green-600">Years Serving</p>
+              </div>
+              <div className="text-center">
+                <Users className="w-8 h-8 text-barn-red-600 mx-auto mb-2" />
+                <p className="text-2xl font-bold text-mountain-green-800">3</p>
+                <p className="text-sm text-mountain-green-600">Generations</p>
+              </div>
+              <div className="text-center">
+                <Award className="w-8 h-8 text-barn-red-600 mx-auto mb-2" />
+                <p className="text-2xl font-bold text-mountain-green-800">14</p>
+                <p className="text-sm text-mountain-green-600">Years Best Food</p>
+              </div>
+            </div>
+
+            <Link 
+              href="/about" 
+              className="inline-flex items-center text-barn-red-600 hover:text-barn-red-700 font-semibold transition-colors"
+            >
+              Read Our Full Story
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </motion.div>
+
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              {/* Placeholder for restaurant image */}
+              <div className="w-full h-full bg-gradient-to-br from-barn-red-100 to-autumn-orange-100 flex items-center justify-center">
+                <div className="text-center">
+                  <Users className="w-20 h-20 text-barn-red-400 mx-auto mb-4" />
+                  <p className="text-barn-red-600">Restaurant Photo</p>
+                  <p className="text-sm text-barn-red-500 mt-2">The Cozy Corner Cafe Team</p>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Floating Stats */}
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-xl p-4"
-          >
-            <div className="flex items-center space-x-3">
-              <Calendar className="w-8 h-8 text-barn-red-600" />
-              <div>
-                <p className="text-2xl font-bold text-mountain-green-800">Since 1952</p>
-                <p className="text-sm text-mountain-green-600">Serving Our Community</p>
-              </div>
-            </div>
+            
+            {/* Decorative element */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-autumn-orange-200 rounded-full opacity-50 blur-2xl" />
           </motion.div>
-        </motion.div>
-
-        {/* Content Side */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="flex items-center space-x-2 mb-4">
-            <Heart className="w-6 h-6 text-barn-red-600" />
-            <span className="text-barn-red-600 font-semibold uppercase tracking-wide">Our Story</span>
-          </div>
-
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-mountain-green-900 mb-6">
-            Where Neighbors
-            <span className="text-gradient block">Become Family</span>
-          </h2>
-
-          <div className="space-y-4 text-mountain-green-700">
-            <p className="text-lg leading-relaxed">
-              Mountain View Diner started in 1952 when Grandma Betty decided Preston County 
-              needed a place where folks could get a hot meal that tasted like home - because 
-              it was made just like home.
-            </p>
-            
-            <p className="leading-relaxed">
-              Three generations later, we're still flipping pancakes on the same griddle, 
-              still making biscuits from Grandma's recipe, and still greeting customers 
-              by name. Some things are worth keeping exactly the way they are.
-            </p>
-            
-            <p className="leading-relaxed">
-              This isn't just where you eat - it's where the coffee's always hot, the 
-              pie's always fresh, and there's always a friendly face ready to ask how 
-              your day's going. That's the Mountain View way.
-            </p>
-          </div>
-
-          <div className="mt-8">
-            <Link 
-              href="/about" 
-              className="inline-flex items-center space-x-2 text-barn-red-600 hover:text-barn-red-700 font-semibold group"
-            >
-              <span>Read Our Full Story</span>
-              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -2,79 +2,77 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Send, CheckCircle, Newspaper } from 'lucide-react'
+import { Mail, Send, CheckCircle } from 'lucide-react'
 
 export default function Newsletter() {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email) return
+    setIsSubmitting(true)
 
-    setStatus('loading')
-
-    // In production, this would submit to Netlify Forms
-    // For now, we'll simulate a submission
+    // Simulate form submission
     setTimeout(() => {
-      setStatus('success')
+      setIsSubmitting(false)
+      setIsSuccess(true)
       setEmail('')
-      setTimeout(() => setStatus('idle'), 5000)
+      
+      // Reset success message after 3 seconds
+      setTimeout(() => setIsSuccess(false), 3000)
     }, 1000)
   }
 
   return (
-    <section id="newsletter" className="py-16 md:py-20 bg-gradient-to-br from-mountain-green-600 to-sky-blue-600 text-white">
+    <section id="newsletter" className="py-16 bg-autumn-orange-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto text-center"
+          className="max-w-3xl mx-auto text-center"
         >
-          {/* Icon */}
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6"
-          >
-            <Newspaper className="w-8 h-8" />
-          </motion.div>
-
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Stay Connected with the Farm
+          <div className="inline-flex items-center justify-center space-x-2 mb-4">
+            <Mail className="w-6 h-6 text-autumn-orange-600" />
+            <span className="text-autumn-orange-600 font-semibold uppercase tracking-wide">Newsletter</span>
+          </div>
+          
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-mountain-green-900 mb-4">
+            Stay Connected
           </h2>
           
-          <p className="text-lg mb-8 text-white/90">
-            Get weekly updates on what's fresh, seasonal recipes, and special farm events. 
-            We promise not to fill your inbox - just the good stuff!
+          <p className="text-lg text-mountain-green-700 mb-8">
+            Join our newsletter for weekly specials, new menu items, and 
+            exclusive offers. We promise not to fill your inbox!
           </p>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="relative">
+          <form 
+            onSubmit={handleSubmit}
+            className="bg-white rounded-lg shadow-lg p-6 md:p-8"
+            data-netlify="true"
+            name="newsletter"
+          >
+            <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="email"
-                name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
+                placeholder="Enter your email address"
                 required
-                disabled={status === 'loading' || status === 'success'}
-                className="w-full px-6 py-4 pr-32 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-full text-white placeholder-white/60 focus:outline-none focus:border-white/60 transition-colors disabled:opacity-50"
+                className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:border-autumn-orange-500 focus:ring-2 focus:ring-autumn-orange-200 transition-colors"
               />
               
               <button
                 type="submit"
-                disabled={status === 'loading' || status === 'success'}
-                className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-white text-mountain-green-700 font-semibold rounded-full hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                disabled={isSubmitting || isSuccess}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
+                  isSuccess 
+                    ? 'bg-green-600 text-white' 
+                    : 'bg-autumn-orange-600 text-white hover:bg-autumn-orange-700'
+                } disabled:opacity-50 disabled:cursor-not-allowed`}
               >
-                {status === 'loading' ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-mountain-green-300 border-t-mountain-green-700 rounded-full animate-spin" />
-                    <span>Sending...</span>
-                  </>
-                ) : status === 'success' ? (
+                {isSuccess ? (
                   <>
                     <CheckCircle className="w-5 h-5" />
                     <span>Subscribed!</span>
@@ -82,33 +80,15 @@ export default function Newsletter() {
                 ) : (
                   <>
                     <Send className="w-5 h-5" />
-                    <span>Subscribe</span>
+                    <span>{isSubmitting ? 'Subscribing...' : 'Subscribe'}</span>
                   </>
                 )}
               </button>
             </div>
-
-            {/* Success Message */}
-            {status === 'success' && (
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-4 text-white/90"
-              >
-                Thanks for subscribing! Check your email for a welcome message.
-              </motion.p>
-            )}
-
-            {/* Privacy Note */}
-            <p className="mt-4 text-sm text-white/70">
-              We respect your privacy and will never share your email. 
-              You can unsubscribe anytime.
+            
+            <p className="text-sm text-mountain-green-600 mt-4">
+              We respect your privacy. Unsubscribe anytime.
             </p>
-          </form>
-
-          {/* Hidden Netlify Form */}
-          <form name="newsletter" data-netlify="true" hidden>
-            <input type="email" name="email" />
           </form>
         </motion.div>
       </div>

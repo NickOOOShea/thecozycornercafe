@@ -12,34 +12,34 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div>
-            <h3 className="font-display text-xl font-bold mb-4">Visit Our Farm</h3>
+            <h3 className="font-display text-xl font-bold mb-4">Visit Us</h3>
             <div className="space-y-3">
               <a 
-                href="https://maps.google.com/maps?daddr=123+Mountain+Road,+Kingwood,+WV+26537" 
+                href="https://maps.google.com/maps?daddr=123+Main+Street,+Clarksburg,+WV+26301" 
                 className="flex items-start space-x-3 hover:text-autumn-orange-300 transition-colors"
               >
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <span>
-                  123 Mountain Road<br />
-                  Kingwood, WV 26537<br />
-                  Preston County
+                  123 Main Street<br />
+                  Clarksburg, WV 26301<br />
+                  Harrison County
                 </span>
               </a>
               
               <a 
-                href="tel:+13045551234" 
+                href="tel:+13045550123" 
                 className="flex items-center space-x-3 hover:text-autumn-orange-300 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span>(304) 555-1234</span>
+                <span>(304) 555-0123</span>
               </a>
               
               <a 
-                href="mailto:info@mountainviewfarmwv.com" 
+                href="mailto:hello@cozycornercafe.com" 
                 className="flex items-center space-x-3 hover:text-autumn-orange-300 transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>info@mountainviewfarmwv.com</span>
+                <span>hello@cozycornercafe.com</span>
               </a>
             </div>
           </div>
@@ -48,14 +48,14 @@ export default function Footer() {
           <div>
             <h3 className="font-display text-xl font-bold mb-4">Quick Links</h3>
             <nav className="space-y-2">
-              <Link href="/products" className="block hover:text-autumn-orange-300 transition-colors">
-                Our Products
+              <Link href="/menu" className="block hover:text-autumn-orange-300 transition-colors">
+                Our Menu
               </Link>
               <Link href="/about" className="block hover:text-autumn-orange-300 transition-colors">
-                About the Farm
+                About Us
               </Link>
               <Link href="/contact" className="block hover:text-autumn-orange-300 transition-colors">
-                Get Directions
+                Contact & Directions
               </Link>
               <a href="#newsletter" className="block hover:text-autumn-orange-300 transition-colors">
                 Newsletter Sign Up
@@ -67,14 +67,14 @@ export default function Footer() {
               <h4 className="font-semibold mb-3">Follow Us</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://facebook.com" 
+                  href="https://facebook.com/cozycornercafe" 
                   aria-label="Facebook"
                   className="w-10 h-10 bg-mountain-green-700 rounded-full flex items-center justify-center hover:bg-mountain-green-600 transition-colors"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://instagram.com" 
+                  href="https://instagram.com/cozycornercafe" 
                   aria-label="Instagram"
                   className="w-10 h-10 bg-mountain-green-700 rounded-full flex items-center justify-center hover:bg-mountain-green-600 transition-colors"
                 >
@@ -84,28 +84,28 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Farm Hours */}
+          {/* Restaurant Hours */}
           <div>
-            <h3 className="font-display text-xl font-bold mb-4">Farm Stand Hours</h3>
+            <h3 className="font-display text-xl font-bold mb-4">Restaurant Hours</h3>
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span>Monday - Friday:</span>
-                <span>8:00 AM - 6:00 PM</span>
+                <span>6:00 AM - 8:00 PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Saturday:</span>
-                <span>7:00 AM - 7:00 PM</span>
+                <span>7:00 AM - 9:00 PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday:</span>
-                <span>9:00 AM - 5:00 PM</span>
+                <span>8:00 AM - 3:00 PM</span>
               </div>
             </div>
             
             <div className="mt-4 p-3 bg-mountain-green-700 rounded-lg">
               <p className="text-sm flex items-center space-x-2">
                 <Clock className="w-4 h-4" />
-                <span>Hours updated daily by voice</span>
+                <span>Kitchen closes 30 min before closing</span>
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-mountain-green-700">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-mountain-green-300">
-              © {currentYear} Mountain View Farm. All rights reserved.
+              © {currentYear} The Cozy Corner Cafe. All rights reserved.
             </p>
             
             <div className="flex items-center space-x-2 text-sm">

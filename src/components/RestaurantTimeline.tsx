@@ -1,50 +1,50 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Coffee, Users, Utensils, Award, Home, Heart, Music } from 'lucide-react'
+import { Clock, Calendar, Star } from 'lucide-react'
+
+const timeline = [
+  {
+    year: '1985',
+    title: 'The Beginning',
+    description: 'Sarah and Mike Thompson open The Cozy Corner Cafe with just 10 tables and a dream.',
+    icon: Star,
+  },
+  {
+    year: '1992',
+    title: 'First Expansion',
+    description: 'Added the dining room extension, doubling our seating capacity.',
+    icon: Calendar,
+  },
+  {
+    year: '2001',
+    title: 'Next Generation',
+    description: 'Their daughter Jennifer joins the business, bringing fresh ideas while keeping traditions.',
+    icon: Clock,
+  },
+  {
+    year: '2010',
+    title: 'Community Recognition',
+    description: 'Named "Best Comfort Food" by Clarksburg Exponent for the first time.',
+    icon: Star,
+  },
+  {
+    year: '2020',
+    title: 'Adapting & Thriving',
+    description: 'Introduced takeout service and kept serving our community through challenging times.',
+    icon: Calendar,
+  },
+  {
+    year: 'Today',
+    title: 'Still Going Strong',
+    description: 'Three generations working together, serving the same great food with the same warm hospitality.',
+    icon: Clock,
+  },
+]
 
 export default function RestaurantTimeline() {
-  const milestones = [
-    {
-      year: '1952',
-      title: 'Grand Opening',
-      description: 'Earl and Betty Johnson open Mountain View Diner with just 10 tables and a dream.',
-      icon: <Home className="w-6 h-6" />
-    },
-    {
-      year: '1968',
-      title: 'Local Favorite',
-      description: 'Expanded dining room to seat 50. Famous for our 25¢ coffee and homemade pie.',
-      icon: <Coffee className="w-6 h-6" />
-    },
-    {
-      year: '1985',
-      title: 'Second Generation',
-      description: 'Tom and Mary Johnson take over, keeping all the original recipes while adding new favorites.',
-      icon: <Heart className="w-6 h-6" />
-    },
-    {
-      year: '1999',
-      title: 'Best Breakfast Award',
-      description: 'Preston County Times readers vote us "Best Breakfast" - an honor we\'ve won 20+ times since.',
-      icon: <Award className="w-6 h-6" />
-    },
-    {
-      year: '2015',
-      title: 'Bluegrass Fridays',
-      description: 'Started hosting live bluegrass music every Friday night. Now a beloved community tradition.',
-      icon: <Music className="w-6 h-6" />
-    },
-    {
-      year: '2024',
-      title: 'Modern Convenience',
-      description: 'Launched voice-powered menu updates so we can share daily specials instantly.',
-      icon: <Utensils className="w-6 h-6" />
-    }
-  ]
-
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-barn-red-50 to-white">
+    <section className="py-16 bg-mountain-green-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,56 +53,55 @@ export default function RestaurantTimeline() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-mountain-green-900 mb-4">
-            Over 70 Years of Mountain Hospitality
+            Our Journey Through the Years
           </h2>
           <p className="text-lg text-mountain-green-700 max-w-2xl mx-auto">
-            Three generations of serving home-cooked meals and creating memories 
-            for our community.
+            From humble beginnings to a Clarksburg institution, 
+            here's how The Cozy Corner Cafe has grown over nearly four decades.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Timeline */}
-          <div className="relative">
-            {/* Vertical Line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-barn-red-200 -translate-x-1/2" />
+        <div className="relative max-w-4xl mx-auto">
+          {/* Timeline line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-barn-red-200" />
 
-            {/* Milestones */}
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative flex items-center mb-12 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
-                {/* Content */}
-                <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                  <div className="ml-20 md:ml-0">
-                    <span className="text-barn-red-600 font-bold text-xl">
-                      {milestone.year}
-                    </span>
-                    <h3 className="font-display font-bold text-2xl text-mountain-green-900 mt-1 mb-2">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-mountain-green-600">
-                      {milestone.description}
-                    </p>
+          {/* Timeline items */}
+          <div className="space-y-12">
+            {timeline.map((item, index) => {
+              const Icon = item.icon
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`flex items-center ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
+                >
+                  <div className="w-1/2" />
+                  
+                  {/* Icon */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-barn-red-600 rounded-full flex items-center justify-center z-10">
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
-                </div>
 
-                {/* Icon */}
-                <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center text-barn-red-600 z-10">
-                  {milestone.icon}
-                </div>
-
-                {/* Empty space for alternating layout */}
-                <div className="hidden md:block flex-1" />
-              </motion.div>
-            ))}
+                  {/* Content */}
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12'}`}>
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                      <p className="text-barn-red-600 font-bold mb-2">{item.year}</p>
+                      <h3 className="font-display font-bold text-xl text-mountain-green-900 mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-mountain-green-600 text-sm">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </div>

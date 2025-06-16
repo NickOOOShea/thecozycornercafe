@@ -5,20 +5,20 @@ import Footer from '@/components/Footer'
 
 // Restaurant metadata
 export const metadata: Metadata = {
-  title: 'Mountain View Diner - Home Cooking Since 1952 | Preston County, WV',
-  description: 'Family diner serving breakfast, lunch, and dinner with mountain hospitality. Located in Preston County, West Virginia. Famous for our biscuits and gravy, country fried steak, and homemade pies.',
-  keywords: 'diner, restaurant, breakfast, lunch, dinner, Preston County, West Virginia, family restaurant, home cooking, country food',
+  title: 'The Cozy Corner Cafe - Comfort Food & Warm Hearts Since 1985 | Clarksburg, WV',
+  description: 'The Cozy Corner Cafe has been serving Clarksburg\'s favorite comfort food for nearly 40 years. From our famous country breakfast to our hearty dinner platters, everything is made with love.',
+  keywords: 'cozy corner cafe, restaurant, breakfast, lunch, dinner, Clarksburg, West Virginia, family restaurant, comfort food, since 1985',
   openGraph: {
-    title: 'Mountain View Diner - Where Locals Eat',
-    description: 'Family diner in Preston County, WV. Serving home-cooked meals since 1952.',
-    url: 'https://mountainviewdinerwv.com',
-    siteName: 'Mountain View Diner',
+    title: 'The Cozy Corner Cafe - Where Every Meal Feels Like Home',
+    description: 'Family restaurant in Clarksburg, WV. Serving comfort food since 1985.',
+    url: 'https://cozycornercafe.com',
+    siteName: 'The Cozy Corner Cafe',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mountain View Diner - Preston County, West Virginia',
+        alt: 'The Cozy Corner Cafe - Clarksburg, West Virginia',
       },
     ],
     locale: 'en_US',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mountain View Diner - Home Cooking in Preston County',
-    description: 'Family diner serving breakfast, lunch, and dinner since 1952.',
+    title: 'The Cozy Corner Cafe - Comfort Food Since 1985',
+    description: 'Family restaurant serving breakfast, lunch, and dinner since 1985.',
     images: ['/images/og-image.jpg'],
   },
   robots: {

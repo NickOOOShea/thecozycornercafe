@@ -1,68 +1,37 @@
 'use client'
 
-import { MapPin, Navigation } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function MapEmbed() {
   return (
-    <div className="h-full min-h-[500px] rounded-2xl overflow-hidden shadow-lg">
-      {/* Map Placeholder */}
-      <div className="w-full h-full bg-gradient-to-br from-mountain-green-50 via-sky-blue-50 to-mountain-green-100 relative">
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-mountain-green-600 rounded-full filter blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-sky-blue-600 rounded-full filter blur-3xl" />
-        </div>
-
-        {/* Map Content */}
-        <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
-          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-mountain-green-100 rounded-full mb-4">
-              <MapPin className="w-8 h-8 text-mountain-green-600" />
-            </div>
-            
-            <h3 className="font-display font-bold text-2xl text-mountain-green-900 mb-4">
-              Mountain View Farm
-            </h3>
-            
-            <address className="not-italic text-mountain-green-600 mb-6">
-              123 Mountain Road<br />
-              Kingwood, WV 26537<br />
-              Preston County
-            </address>
-
-            <div className="space-y-3">
-              <a 
-                href="https://maps.google.com/maps?daddr=123+Mountain+Road,+Kingwood,+WV+26537" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full inline-flex items-center justify-center"
-              >
-                <Navigation className="w-5 h-5 mr-2" />
-                Get Directions
-              </a>
-              
-              <p className="text-sm text-mountain-green-600">
-                15 minutes from downtown Kingwood<br />
-                Look for the red barn!
-              </p>
-            </div>
-          </div>
-
-          {/* Decorative Map Elements */}
-          <div className="absolute top-4 left-4 bg-white rounded-lg shadow-md p-3">
-            <p className="text-xs font-semibold text-mountain-green-700">
-              GPS: 39.4572° N, 79.6822° W
-            </p>
-          </div>
-        </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="h-full min-h-[400px] lg:min-h-[600px] relative"
+    >
+      <div className="bg-white rounded-lg shadow-lg h-full p-2">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.5!2d-80.3445!3d39.2806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDE2JzUwLjIiTiA4MMKwMjAnNDAuMiJX!5e0!3m2!1sen!2sus!4v1234567890123"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="rounded-lg"
+          title="The Cozy Corner Cafe Location"
+        />
       </div>
-
-      {/* Note about embedding real map */}
-      <div className="bg-mountain-green-600 text-white p-4 text-center">
-        <p className="text-sm">
-          Interactive map would be embedded here with Google Maps or similar service
+      
+      {/* Address overlay */}
+      <div className="absolute bottom-6 left-6 bg-white rounded-lg shadow-lg p-4 max-w-xs">
+        <h3 className="font-bold text-mountain-green-900 mb-1">The Cozy Corner Cafe</h3>
+        <p className="text-sm text-mountain-green-600">
+          123 Main Street<br />
+          Clarksburg, WV 26301
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }

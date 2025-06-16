@@ -86,13 +86,13 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-barn-red-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">MD</span>
+              <span className="text-white font-bold text-xl">CC</span>
             </div>
             <div>
               <h1 className="font-display font-bold text-xl text-mountain-green-800">
-                Mountain View Diner
+                The Cozy Corner Cafe
               </h1>
-              <p className="text-xs text-barn-red-600">Serving Since 1952</p>
+              <p className="text-xs text-barn-red-600">Since 1985</p>
             </div>
           </Link>
 
