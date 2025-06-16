@@ -7,6 +7,12 @@ import hoursData from '@/content/hours.json'
 
 type DayName = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday'
 
+interface DayHours {
+  open?: string
+  close?: string
+  closed?: boolean
+}
+
 export default function HoursDisplay() {
   const [currentDay, setCurrentDay] = useState<DayName>('monday')
   const [isOpen, setIsOpen] = useState(false)
