@@ -33,9 +33,9 @@
       "closed": true
     },
     "sunday": {
-      "open": "8:00 AM",
-      "close": "3:00 PM",
-      "closed": false
+      "open": "0:00",
+      "close": "0:00",
+      "closed": true
     }
   },
   "special": {
