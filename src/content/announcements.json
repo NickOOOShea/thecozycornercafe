@@ -22,5 +22,13 @@
     "startDate": "2024-01-01",
     "endDate": "2025-12-31",
     "priority": "low"
+  },
+  {
+    "id": "temp-closing",
+    "title": "Early Closing This Friday",
+    "content": "We will be closing 2 hours early this Friday. Regular hours will resume next week.",
+    "startDate": "2024-01-19",
+    "endDate": "2024-01-19",
+    "priority": "high"
   }
 ]
