@@ -28,9 +28,9 @@
       "temporaryDate": "2024-01-19"
     },
     "saturday": {
-      "open": "7:00 AM",
-      "close": "9:00 PM",
-      "closed": false
+      "open": "0:00",
+      "close": "0:00",
+      "closed": true
     },
     "sunday": {
       "open": "8:00 AM",
