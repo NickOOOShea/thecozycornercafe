@@ -3,44 +3,66 @@
 import { useState, useEffect } from 'react'
 import { X, AlertCircle, Info } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import announcementsData from '@/content/announcements.json'
 
 type AnnouncementType = 'info' | 'warning' | 'urgent'
 
 type Announcement = {
-  active: boolean
-  message: string
-  type: AnnouncementType
-  expiresAt: string
-  createdAt: string
-  id: string
+  id: number
+  title: string
+  content: string
+  startDate: string
+  endDate: string
+  priority: string
+  type?: AnnouncementType
 }
 
 export default function AnnouncementBanner() {
   const [isVisible, setIsVisible] = useState(true)
-  const [announcement, setAnnouncement] = useState<Announcement | null>(null)
+  const [currentAnnouncements, setCurrentAnnouncements] = useState<Announcement[]>([])
+  const [displayIndex, setDisplayIndex] = useState(0)
 
   useEffect(() => {
-    // In production, this would fetch from the announcements.json file
-    // For now, we'll use a sample announcement
-    const sampleAnnouncement: Announcement = {
-      active: true,
-      message: "Fresh strawberries now available! First come, first served - limited quantities.",
-      type: "info", // info, warning, urgent
-      expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(), // 7 days from now
-      createdAt: new Date().toISOString(),
-      id: "announcement-1"
-    }
-
-    // Check if announcement is still valid
-    if (sampleAnnouncement.active && new Date(sampleAnnouncement.expiresAt) > new Date()) {
-      setAnnouncement(sampleAnnouncement)
-    }
+    // Filter active announcements based on date
+    const now = new Date()
+    const active = announcementsData.filter((announcement: any) => {
+      const start = new Date(announcement.startDate)
+      const end = new Date(announcement.endDate)
+      return now >= start && now <= end
+    }).sort((a: any, b: any) => {
+      // Sort by priority (high > normal > low)
+      const priorityOrder = { high: 3, normal: 2, low: 1 }
+      return (priorityOrder[b.priority as keyof typeof priorityOrder] || 0) - 
+             (priorityOrder[a.priority as keyof typeof priorityOrder] || 0)
+    })
+    
+    setCurrentAnnouncements(active)
   }, [])
 
-  if (!announcement || !isVisible) return null
+  // Rotate through announcements if multiple
+  useEffect(() => {
+    if (currentAnnouncements.length > 1) {
+      const interval = setInterval(() => {
+        setDisplayIndex((prev) => (prev + 1) % currentAnnouncements.length)
+      }, 5000) // Change every 5 seconds
+      return () => clearInterval(interval)
+    }
+  }, [currentAnnouncements.length])
+
+  if (currentAnnouncements.length === 0 || !isVisible) return null
+
+  const announcement = currentAnnouncements[displayIndex]
 
   const getAnnouncementStyles = () => {
-    switch (announcement.type) {
+    // Map priority to type for styling
+    const typeMap = {
+      high: 'urgent',
+      normal: 'warning',
+      low: 'info'
+    }
+    const type = announcement.type || typeMap[announcement.priority as keyof typeof typeMap] || 'info'
+    
+    switch (type) {
       case 'urgent':
         return {
           bg: 'bg-barn-red-600',
@@ -65,9 +87,10 @@ export default function AnnouncementBanner() {
   const styles = getAnnouncementStyles()
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {isVisible && (
         <motion.div
+          key={announcement.id}
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: 'auto', opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
@@ -79,9 +102,12 @@ export default function AnnouncementBanner() {
               {/* Icon */}
               <div className="flex items-center space-x-3">
                 {styles.icon}
-                <p className="text-sm md:text-base font-medium text-center">
-                  {announcement.message}
-                </p>
+                <div className="text-sm md:text-base font-medium text-center">
+                  {announcement.title && (
+                    <span className="font-bold mr-2">{announcement.title}:</span>
+                  )}
+                  {announcement.content}
+                </div>
               </div>
 
               {/* Close Button */}
