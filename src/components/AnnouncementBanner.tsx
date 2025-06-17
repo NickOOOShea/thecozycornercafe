@@ -8,7 +8,7 @@ import announcementsData from '@/content/announcements.json'
 type AnnouncementType = 'info' | 'warning' | 'urgent'
 
 type Announcement = {
-  id: number
+  id: number | string
   title: string
   content: string
   startDate: string
