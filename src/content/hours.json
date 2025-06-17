@@ -22,8 +22,10 @@
     },
     "friday": {
       "open": "6:00 AM",
-      "close": "8:00 PM",
-      "closed": false
+      "close": "6:00 PM",
+      "closed": false,
+      "temporary": true,
+      "temporaryDate": "2024-01-19"
     },
     "saturday": {
       "open": "7:00 AM",
